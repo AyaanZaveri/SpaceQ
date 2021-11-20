@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dist/css/style.css') }}">
+    <link href="themes/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tailwind Codex</title>
+</head>
+<body class="bg-gray-50">
+
+    <form action="/" method="POST">
+
+        <div class="mt-5 grid place-items-center">
+          <div class="text-base font-medium">SpaceQ</div>
+          <input name="name" autocomplete="off" type="input" placeholder="Ask SpaceQ" class="mt-3 border-gray-300 w-9/12 h-9 px-2 focus:ring-gray inline-flex items-center hover:text-gray-500 text-gray-500 active:text-gray-500 text-left text-sm font-medium leading-5 active:bg-gray-100 bg-white hover:bg-gray-50 border focus:border-gray-500 focus:ring ring-gray-300 rounded-md focus:outline-none transition">
+          <button class="mt-3 border-gray-300 w-3/12 md:w-1/12 h-9 focus:ring-gray hover:text-gray-500 text-gray-500 active:text-gray-500 active:bg-gray-100 bg-white hover:bg-gray-50 border focus:border-gray-500 focus:ring ring-gray-300 rounded-md focus:outline-none transition">Search</button>
+          <div id="data" class="text-xl text-center p-5 font-light hover:text-gray-500 hover:font-normal transition-all delay-150">{{answer}}</div>
+        </div>
+
+    </form>
+</body>
+</html>
