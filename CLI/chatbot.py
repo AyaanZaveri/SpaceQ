@@ -1,7 +1,8 @@
 import openai
+import os
 
-#openai.api_key = "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"
-openai.api_key = "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"
+#To set API_KEY, type "export OPENAI_API_KEY=YOUR_KEY" in terminal
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 completion = openai.Completion()
 
