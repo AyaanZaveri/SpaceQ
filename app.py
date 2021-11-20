@@ -10,8 +10,6 @@ app.secret_key = "abc"
 qLog = []
 aLog = []
 
-
-
 @app.route('/', methods=['GET','POST'])
 
 def process():
@@ -21,7 +19,8 @@ def process():
   print(name)
 
   #To set API_KEY, type "export OPENAI_API_KEY=YOUR_KEY" in terminal
-  openai.api_key = os.getenv("OPENAI_API_KEY")
+  #openai.api_key = os.getenv("OPENAI_API_KEY")
+  openai.api_key = "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"
 
   completion = openai.Completion()
 
@@ -54,10 +53,7 @@ def process():
     print(aLogStr)
     print(answer)
 
-    if answer == "'''":
-      answer = "Answer:"
-
-  return render_template('index.html', answer=answer, name=name, qLogStr=qLogStr, aLogStr=aLogStr)
+    return render_template('index.html', answer=answer, name=name, qLogStr=qLogStr, aLogStr=aLogStr)
 
 if __name__ == '__main__':
   app.run(host="0.0.0.0", debug=True, threaded=True, port=8181)
