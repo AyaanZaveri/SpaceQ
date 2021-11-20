@@ -37,24 +37,26 @@ def process():
       max_tokens=150)
 
     answer = response.choices[0].text.strip()
-      
-  question = name
-  answer = ask(question, default_log)
+    return answer
 
-  qLog.append(question)
-  aLog.append(answer)
+  if __name__ == '__main__':   
+    question = name
+    answer = ask(question, default_log)
 
-  qLogStr = str(qLog)
-  aLogStr = str(aLog)
+    qLog.append(question)
+    aLog.append(answer)
 
-  print(qLogStr)
-  print(aLogStr)
+    qLogStr = str(qLog)
+    aLogStr = str(aLog)
 
-  if answer == "'''":
-    answer = "Answer:"
+    print(qLogStr)
+    print(aLogStr)
 
-  print(answer)
-  print(question)
+    if answer == "'''":
+      answer = "Answer:"
+
+    print(answer)
+    print(question)
 
   return render_template('index.html', answer=answer, name=name, qLogStr=qLogStr, aLogStr=aLogStr)
 
