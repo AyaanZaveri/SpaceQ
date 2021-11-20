@@ -1,5 +1,2 @@
 openai
 flask
-json
-requests
-os
