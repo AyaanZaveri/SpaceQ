@@ -19,9 +19,8 @@ def process():
   print(name)
 
   #To set API_KEY, type "export OPENAI_API_KEY=YOUR_KEY" in terminal
-  #openai.api_key = os.getenv("OPENAI_API_KEY")
-  openai.api_key = "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"
-
+  openai.api_key = os.getenv("OPENAI_API_KEY")
+  
   completion = openai.Completion()
 
   with open("CLI/samples.txt") as file:
