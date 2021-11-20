@@ -10,8 +10,7 @@ app.secret_key = "abc"
 qLog = []
 aLog = []
 
-#if __name__ == "__main__":
-#    app.run()
+
 
 @app.route('/', methods=['GET','POST'])
 
@@ -55,10 +54,8 @@ def process():
     print(aLogStr)
     print(answer)
 
-#  if answer == "'''":
- #   answer = "Answer:"
-
-  print(answer)
+    if answer == "'''":
+      answer = "Answer:"
 
   return render_template('index.html', answer=answer, name=name, qLogStr=qLogStr, aLogStr=aLogStr)
 
